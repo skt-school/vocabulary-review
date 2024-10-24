@@ -197,7 +197,7 @@
                </div>
 			        </div>
                        
-	<div class="undercap undercap_bg-color_blue" style="">
+	<div class="undercap undercap_bg-color_blue">
 		<div class="b-header_content__items">
 			<div class="b-header_content__item m-header_content__title">
 			<img id="title-picture" class="img-title" src="./animals-media/animals-title.png" alt="" background="transparent">
@@ -210,7 +210,7 @@
 		  <button class="btn btn-lg button-primary show_vocabulary_js" style="min-width:236px;">Show Vocabulary</button>
 		  <button class="btn btn-lg button-primary show_qr_js" style="min-width:236px;">Show QR code</button> 
 		</div>
-		<p id="vocabulary" class="vocabulary_js" align="center" ></p>
+		<p class="vocabulary_js" align="center" ><iframe id="vocabulary" data-src="./animals-media/animals-vocabulary.html" class="no-scroll" loading="lazy" style="width:820px;height:500px;border: 3px dotted #14a3b5;"></iframe></p>
 		<p class="qr_pop_up_js" align="center" > <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
 	</div>
 	
@@ -534,27 +534,22 @@
                         }
                     });
                 </script>
+
+	           <script>
+                    $('.show_vocabulary_js').on('click', function(event) {
+                        event.preventDefault();
+                        if (!$('.vocabulary_js').is(':visible')) {
+							var iframe = document.getElementById("vocabulary");
+							iframe.src = iframe.getAttribute("data-src");
+                            $('.vocabulary_js').slideDown(400);
+                            $(this).text('Hide vocabulary');
+                        } else {
+                            $('.vocabulary_js').slideUp(400);
+                            $(this).text('Show vocabulary');
+                        }
+                    });
+                </script>
 				
-					<script>
-        var playing = 0;
-        $('.show_vocabulary_js').on('click', function openVideo(event) {
-			event.preventDefault();
-            if (!$('.vocabulary_js').is(':visible') && playing === 0){
-				$('#vocabulary').html('<iframe src="./animals-media/animals-vocabulary.html" class="no-scroll" style="width:820px;height:500px;border: 3px dotted #14a3b5;" ></iframe>');
-                $('.vocabulary_js').slideDown(400);
-                $('.show_vocabulary_js').text('Hide vocabulary');
-				playing = 1;
-            } else {
-				$('.vocabulary_js').slideUp(400);
-                $('.show_vocabulary_js').text('Show vocabulary');
-            }
-			if (!$('.vocabulary_js').is(':visible') && playing <= 1){
-				$('.vocabulary_js').slideDown(400);
-                $('.show_vocabulary_js').text('Hide vocabulary');	
-            } 
-			});	
-    </script>
-	
 				<script>
                     $('.show_qr_js').on('click', function(event) {
                         event.preventDefault();
