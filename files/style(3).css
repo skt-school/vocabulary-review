@@ -19,6 +19,11 @@
 .answers_pop_up_js {display: none;}
 .answers_pop_up_js-2 {display: none;}
 
+.show_vocabulary_js {font-weight: bold;}
+.show_vocabulary_js-2 {font-weight: bold;}
+.vocabulary_js {display: none;}
+.vocabulary_js-2 {display: none;}
+
 .show_translations_js {font-weight: bold;}
 .show_translations_js-2 {font-weight: bold;}
 .translations_js {display: none;}
