@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Animals Vocabulary</title>
+
+<style>
+    body{margin:0px;}
+    div{width:800px;display:block;margin:auto;height:auto;right:-2;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:80px;font-weight:bold;
+        padding-bottom:10px;}
+    img{width:500px;max-height:500px;}
+    body > div{height:500px;padding-top:20px;}
+    a {position:absolute;margin-top:150px;font-size:30px;background:#14a3b5;color:white;padding:20px;}
+
+</style>
+
+</head>
+<body>
+<div><div>Lizard</div><img src="./lizard.png"><a>Next</a></div>
+<div><div>Birds</div><img src="./birds.png"><a>Next</a></div>
+<div><div>Wing</div><img src="./wing.png"><a>Next</a></div>
+<div><div>Beak</div><img src="./beak.png"><a>Next</a></div>
+<div><div>Feathers</div><img src="./feathers.png"><a>Next</a></div>
+<div><div>Web</div><img src="./web.png"><a>Next</a></div>
+<div><div>Talons</div><img src="./talons.png"><a>Next</a></div>
+<div><div>Claws</div><img src="./claws.png"><a>Next</a></div>
+<div><div>Fish</div><img src="./fish.png"><a>Next</a></div>
+<div><div>Fin</div><img src="./fin.png"><a>Next</a></div>
+<div><div>Gills</div><img src="./gills.png"><a>Next</a></div>
+<div><div>Scales</div><img src="./scales.png"><a>Next</a></div>
+<div><div>Shell</div><img src="./shell.png"><a>Next</a></div>
+<div><div>Tail</div><img src="./tail.png"><a>Next</a></div>
+<div><div>Trunk</div><img src="./trunk.png"><a>Next</a></div>
+<div><div>Tusks</div><img src="./tusks.png"><a>Next</a></div>
+<div><div>Fur</div><img src="./fur.png"><a>Next</a></div>
+<div><div>Hooves</div><img src="./hooves.png"><a>Next</a></div>
+<div><div>Horns</div><img src="./horns.png"><a>Next</a></div>
+<div><div>Antlers</div><img src="./antlers.png"><a>Next</a></div>
+<div><div>Hump</div><img src="./hump.png"><a>Next</a></div>
+<div><div>Mane</div><img src="./mane.png"><a>Next</a></div>
+<div><div>Pouch</div><img src="./pouch.png"><a>Next</a></div>
+<div><div>Snout</div><img src="./snout.png"><a>Next</a></div>
+<div><div>Fangs</div><img src="./fangs.png"><a>Next</a></div>
+<div><div>Bony plates</div><img src="./bony_plates.png"><a>Next</a></div>
+<div><div>Whiskers</div><img src="./whiskers.png"><a>Next</a></div>
+<div><div>Paws</div><img src="./paws.png"><a>Next</a></div>
+<div><div>Tentacles</div><img src="./tentacles.png"><a>Next</a></div>
+<div><div>Insects</div><img src="./insects.png"><a>Next</a></div>
+<div><div>Mammals</div><img src="./mammals.png"><a>Next</a></div>
+<div><div>Reptiles</div><img src="./reptiles.png"><a>Next</a></div>
+<div><div>Rodents</div><img src="./rodents.png"><a>Next</a></div>
+<div><div>Herbivore</div><img src="./herbivore.png"><a>Next</a></div>
+<div><div>Predators</div><img src="./predators.png"><a>Next</a></div>
+<div><div>Wild animals</div><img src="./wild_animals.png"><a>Next</a></div>
+<div><div>Domestic animals</div><img src="./domestic_animals.png"><a>Next</a></div>
+<div><div>Endangered species</div><img src="./endangered_species.png"><a>Next</a></div>
+<div><div>Amphibians</div><img src="./amphibians.png"><a style="background:red">First</a></div>
+
+    
+<script>
+    const link = document.querySelectorAll("a");
+    const NumberOfLinks = document.querySelectorAll("a").length;
+    for (var i = 0; i < NumberOfLinks; i++){
+        document.querySelectorAll("body > div")[i].id = i;
+        if (i < NumberOfLinks - 1){
+            document.querySelectorAll("a")[i].href = '#' + (i + 1);
+        } else {
+            document.querySelectorAll("a")[i].href = '#0'; 
+        }
+    }
+</script>
+
+    </div>
+</body>
+</html>
