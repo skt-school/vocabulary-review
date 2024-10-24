@@ -540,7 +540,7 @@
         $('.show_vocabulary_js').on('click', function openVideo(event) {
 			event.preventDefault();
             if (!$('.vocabulary_js').is(':visible') && playing === 0){
-				$('#vocabulary').html('<iframe src="./animals-media/animals-vocabulary.html" width="900" height="500" class="no-scroll"></iframe>');
+				$('#vocabulary').html('<iframe src="./animals-media/animals-vocabulary.html" class="no-scroll" style="width:820px;height:500px;border: 3px dotted #14a3b5;" ></iframe>');
                 $('.vocabulary_js').slideDown(400);
                 $('.show_vocabulary_js').text('Hide vocabulary');
 				playing = 1;
