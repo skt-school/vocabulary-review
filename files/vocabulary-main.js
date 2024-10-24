@@ -287,8 +287,7 @@ var PuzzleSprint = {
 			};
 		if(
       Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word
-      && this.word.visible_translation == lastWord.visible_translation
+      && lastWord.word == this.word.word //The same  word doesn't show up twice
     ) {
 		
 	 this.nextWord(true);
@@ -958,8 +957,8 @@ var PuzzleSprint2 = {
 			};
 		if(
       Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word
-      && this.word.visible_translation == lastWord.visible_translation
+      && lastWord.word == this.word.word //The same  word doesn't show up twice
+ 
     ) {
 		
 	 this.nextWord(true);
