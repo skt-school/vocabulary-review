@@ -207,11 +207,11 @@
 
 	<div class="container-fluid under-title" style="">
 		<div class="show-button-2">
-		  <button class="btn btn-lg button-primary show_translations_js" style="min-width:236px;">Show Vocabulary</button>
+		  <button class="btn btn-lg button-primary show_vocabulary_js" style="min-width:236px;">Show Vocabulary</button>
 		  <button class="btn btn-lg button-primary show_qr_js" style="min-width:236px;">Show QR code</button> 
 		</div>
-		<p align="center" class="translations_js">  <iframe src="./animals-media/animals-vocabulary.html" width="1000" height="500" class="no-scroll"></iframe> </p>
-		<p align="center" class="qr_pop_up_js"> <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
+		<p id="vocabulary" class="vocabulary_js" align="center" ></p>
+		<p class="qr_pop_up_js" align="center" > <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
 	</div>
 	
 	<div class="container-fluid" style="">
@@ -535,6 +535,26 @@
                     });
                 </script>
 				
+					<script>
+        var playing = 0;
+        $('.show_vocabulary_js').on('click', function openVideo(event) {
+			event.preventDefault();
+            if (!$('.vocabulary_js').is(':visible') && playing === 0){
+				$('#vocabulary').html('<iframe src="./animals-media/animals-vocabulary.html" width="1000" height="500" class="no-scroll"></iframe>');
+                $('.vocabulary_js').slideDown(400);
+                $('.show_vocabulary_js').text('Hide vocabulary');
+				playing = 1;
+            } else {
+				$('.vocabulary_js').slideUp(400);
+                $('.show_vocabulary_js').text('Show vocabulary');
+            }
+			if (!$('.vocabulary_js').is(':visible') && playing <= 1){
+				$('.vocabulary_js').slideDown(400);
+                $('.show_vocabulary_js').text('Hide vocabulary');	
+            } 
+			});	
+    </script>
+	
 				<script>
                     $('.show_qr_js').on('click', function(event) {
                         event.preventDefault();
