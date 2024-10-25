@@ -1425,7 +1425,7 @@ $(function() {
   if (selectedTime == 30){timer = 31}
   else if (selectedTime == 45){timer = 46}
   else if (selectedTime == 60){timer = 61}
-  else {timer = 31};
+  else {timer = 61};
 
   SprintTimer = new Timer({
     duration: timer,
