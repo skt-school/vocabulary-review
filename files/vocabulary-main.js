@@ -1454,13 +1454,12 @@ $(function() {
       var number2 = parseInt(document.getElementById('total-num2').innerText);
       var targetDiv1 = document.getElementById('finish_picture_1');
 	  var targetDiv2 = document.getElementById('finish_picture_2');
-	  var finalAudio = new Audio('./media/finish.mp3');	
-	  var imageElement = document.createElement('img');
-	  var imageElement_2 = document.createElement('img');
-      var imageElement1 = document.createElement('img');
-	  var imageElement2 = document.createElement('img');
-	  var imageElement3 = document.createElement('img');
-	  var imageElement4 = document.createElement('img');   
+	  var imageElement = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Blue-team.png', height: 150});
+	  var imageElement_2 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Red-team.png', height: 150});
+      var imageElement1 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/victory.gif', width: 350, height: 150});
+	  var imageElement2 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/defeat.gif', width: 350, height: 150});
+	  var imageElement3 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/draw.gif', width: 350, height: 150});
+	  var imageElement4 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/draw.gif', width: 350, height: 150});  
 	  var clockElement = document.getElementById('b-sprint__clock');
 	  var clockElement2 = document.getElementById('b-timer');
 	  var totalResult = number1 + number2;
@@ -1474,19 +1473,8 @@ $(function() {
 	  
 	  wordGame.classList.remove('b-field__body_right', 'b-field__body_wrong');
 	  wordGame2.classList.remove('b-field__body_right', 'b-field__body_wrong');	
-	  finalAudio.play();
-	  imageElement.src = './media/Blue-team.png';
-	  imageElement_2.src = './media/Red-team.png';
-	  imageElement1.src = './media/victory.gif';
-	  imageElement2.src = './media/defeat.gif';
-	  imageElement3.src = './media/draw.gif';
-	  imageElement4.src = './media/draw.gif';
-	  imageElement.height = 150; 
-	  imageElement_2.height = 150;
-      imageElement1.height = 150; imageElement1.width = 350; 	  
-      imageElement2.height = 150; imageElement2.width = 350; 
-      imageElement3.height = 150; imageElement2.width = 350; 	
-      
+	  audio.playSound(window['STATIC_HOME'] + '/finish.mp3');
+
 	  clockElement2.parentNode.replaceChild(totalScore, clockElement2);
 
 	  spanElement.parentNode.removeChild(spanElement);
