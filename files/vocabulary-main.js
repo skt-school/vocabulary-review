@@ -257,7 +257,6 @@ var PuzzleSprint = {
 
     for (var i = Math.floor(Math.random() * puzzle_sprint_words[this.level].length); i < this.words[this.level].length; i++) {
       
-
       this.word = this.words[this.level][i];
       this.word_ind = i;
       break;
@@ -268,33 +267,42 @@ var PuzzleSprint = {
     var word = this.word.word;
 	
 	for (var i = 0; i < puzzle_sprint_words[this.level].length; i++)  {
+		puzzle_sprint_words[this.level].shown = 1;
 		var random = Math.random(); 
 		if (random < 0.7){
 		    puzzle_sprint_words[this.level][i].visible_translation = puzzle_sprint_words[this.level][i].translation; 
 	        puzzle_sprint_words[this.level][i].visible_translation2 = puzzle_sprint_words[this.level][i].fake_translation;
 		    puzzle_sprint_words[this.level][i].visible_translation3 = puzzle_sprint_words[this.level][i].fake_translation2;
+			puzzle_sprint_words[this.level][i].correct = true;	
 			} 
 		else {
 			puzzle_sprint_words[this.level][i].visible_translation = puzzle_sprint_words[this.level][i].fake_translation;
 	        puzzle_sprint_words[this.level][i].visible_translation2 = puzzle_sprint_words[this.level][i].translation;
 	        puzzle_sprint_words[this.level][i].visible_translation3 = puzzle_sprint_words[this.level][i].fake_translation2;
+			puzzle_sprint_words[this.level][i].correct = false;
 		};
-	    if (random < 0.7) {
-		    puzzle_sprint_words[this.level][i].correct = true
-		}
-	    else {
-			puzzle_sprint_words[this.level][i].correct = false
-			};
-		if(
-      Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word //The same  word doesn't show up twice
-    ) {
 		
-	 this.nextWord(true);
-      return false;
-	
-    }
+		 if(puzzle_sprint_words[this.level].every(obj => obj['shown'] == 1))
+		 {
+		 for (var i = 0; i < puzzle_sprint_words[this.level].length; i++){
+		 puzzle_sprint_words[this.level][i].shown = 0;
+		 }
 		}
+		else if( 
+		this.word.shown == 1
+		) {	
+	    this.nextWord(true);
+        return false;	
+		}
+		
+		if(
+		Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
+		&& lastWord.word == this.word.word //The same  word doesn't show up twice
+		) {
+		this.nextWord(true);
+		return false;
+		}
+			}
 		
     var visible_translation = this.word.visible_translation;
 	var visible_translation2 = this.word.visible_translation2;
@@ -937,35 +945,43 @@ var PuzzleSprint2 = {
     var randomIndex = Math.floor(Math.random() * puzzle_sprint_words2[this.level].length);
     var word = this.word.word;
 	
-    	for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++)  {
+	for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++)  {
+		puzzle_sprint_words2[this.level].shown = 1;
 		var random = Math.random(); 
 		if (random < 0.7){
 		    puzzle_sprint_words2[this.level][i].visible_translation = puzzle_sprint_words2[this.level][i].translation; 
 	        puzzle_sprint_words2[this.level][i].visible_translation2 = puzzle_sprint_words2[this.level][i].fake_translation;
 		    puzzle_sprint_words2[this.level][i].visible_translation3 = puzzle_sprint_words2[this.level][i].fake_translation2;
+			puzzle_sprint_words2[this.level][i].correct = true;	
 			} 
 		else {
 			puzzle_sprint_words2[this.level][i].visible_translation = puzzle_sprint_words2[this.level][i].fake_translation;
 	        puzzle_sprint_words2[this.level][i].visible_translation2 = puzzle_sprint_words2[this.level][i].translation;
 	        puzzle_sprint_words2[this.level][i].visible_translation3 = puzzle_sprint_words2[this.level][i].fake_translation2;
+			puzzle_sprint_words2[this.level][i].correct = false;
 		};
-	    if (random < 0.7) {
-		    puzzle_sprint_words2[this.level][i].correct = true
-		}
-	    else {
-			puzzle_sprint_words2[this.level][i].correct = false
-			};
-		if(
-      Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word //The same  word doesn't show up twice
- 
-    ) {
 		
-	 this.nextWord(true);
-      return false;
-	
-    }
+		 if(puzzle_sprint_words2[this.level].every(obj => obj['shown'] == 1))
+		 {
+		 for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++){
+		 puzzle_sprint_words2[this.level][i].shown = 0;
+		 }
 		}
+		else if( 
+		this.word.shown == 1
+		) {	
+	    this.nextWord(true);
+        return false;	
+		}
+		
+		if(
+		Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
+		&& lastWord.word == this.word.word //The same  word doesn't show up twice
+		) {
+		this.nextWord(true);
+		return false;
+		}
+			}
 
     var visible_translation = this.word.visible_translation;
 	var visible_translation2 = this.word.visible_translation2;
