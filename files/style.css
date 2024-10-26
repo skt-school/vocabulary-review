@@ -361,6 +361,7 @@ border:1px;border-width:1px;border-radius:.375rem;padding: 5px;margin-right:0px;
 	.drop-down {font-size:30px!important}
 	.unit-right{position:absolute; float:right;}
     .unit-text{background:#f8d946;font-size:28px;color:#c83f35!important;padding:12px 18px;} 
+	.finalGifs{min-width:200px;max-width: 300px; min-height: 150px;max-height: 200px;}
     
 	.vocabulary_header_grid {
       height: 100px;
