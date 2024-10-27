@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Animals Vocabulary</title>
+
+<style>
+    body{margin:0px;}
+    div{width:800px;display:block;margin:auto;height:auto;right:-2;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:80px;font-weight:bold;
+        padding-bottom:10px;}
+    img{width:500px;max-height:500px;}
+    body > div{height:500px;padding-top:20px;}
+    a {position:absolute;margin-top:150px;font-size:30px;background:#14a3b5;color:white;padding:20px;}
+
+</style>
+
+</head>
+<body>
+
+<div><div>Halloween costumes</div><img src="./costumes.png"><a>Next</a></div>
+<div><div>Candy</div><img src="./candy.png"><a>Next</a></div>
+<div><div>Treat bag</div><img src="./treat_bag.png"><a>Next</a></div>
+<div><div>Jack-o'-lantern</div><img src="./jack-o-lantern.png"><a>Next</a></div>
+<div><div>Candle</div><img src="./candle.png"><a>Next</a></div>
+<div><div>Black cat</div><img src="./black_cat.png"><a>Next</a></div>
+<div><div>Bat</div><img src="./bat.png"><a>Next</a></div>
+<div><div>Spider</div><img src="./spider.png"><a>Next</a></div>
+<div><div>Spider web</div><img src="./spider_web.png"><a>Next</a></div>
+<div><div>Owl</div><img src="./owl.png"><a>Next</a></div>
+<div><div>Crow</div><img src="./crow.png"><a>Next</a></div>
+<div><div>Scarecrow</div><img src="./scarecrow.png"><a>Next</a></div>
+<div><div>Ghost</div><img src="./ghost.png"><a>Next</a></div>
+<div><div>Haunted house</div><img src="./haunted_house.png"><a>Next</a></div>
+<div><div>Vampire</div><img src="./vampire.png"><a>Next</a></div>
+<div><div>Coffin</div><img src="./coffin.png"><a>Next</a></div>
+<div><div>Warewolf</div><img src="./warewolf.png"><a>Next</a></div>
+<div><div>Full moon</div><img src="./full_moon.png"><a>Next</a></div>
+<div><div>Witch</div><img src="./witch.png"><a>Next</a></div>
+<div><div>Witch hat</div><img src="./witch_hat.png"><a>Next</a></div>
+<div><div>Broom</div><img src="./broom.png"><a>Next</a></div>
+<div><div>Cauldron</div><img src="./cauldron.png"><a>Next</a></div>
+<div><div>Potions</div><img src="./potions.png"><a>Next</a></div>
+<div><div>Crystal ball</div><img src="./crystal_ball.png"><a>Next</a></div>
+<div><div>Monster</div><img src="./monster.png"><a>Next</a></div>
+<div><div>Zombie</div><img src="./zombie.png"><a>Next</a></div>
+<div><div>Frankenstein</div><img src="./frankenstein.png"><a>Next</a></div>
+<div><div>Skeleton</div><img src="./skeleton.png"><a>Next</a></div>
+<div><div>Mummy</div><img src="./mummy.png"><a>Next</a></div>
+<div><div>Tombstone</div><img src="./tombstone.png"><a style="background:red">First</a></div>
+   
+<script>
+    const link = document.querySelectorAll("a");
+    const NumberOfLinks = document.querySelectorAll("a").length;
+    for (var i = 0; i < NumberOfLinks; i++){
+        document.querySelectorAll("body > div")[i].id = i;
+        if (i < NumberOfLinks - 1){
+            document.querySelectorAll("a")[i].href = '#' + (i + 1);
+        } else {
+            document.querySelectorAll("a")[i].href = '#0'; 
+        }
+    }
+</script>
+
+    </div>
+</body>
+</html>

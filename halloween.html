@@ -12,11 +12,11 @@
 
 	<link rel="icon" href="./media/favicon.png" type="image/png">
  
-	<title>Vocabulary: Animals</title>
+	<title>Vocabulary: Halloween</title>
 
     <script>    
       var HOME = "";
-      var STATIC_HOME = "media";
+      var STATIC_HOME = "halloween-media";
       var STATIC_API_PREFIX = "";
       var THEME_URI = "";
       var site_language = "en";
@@ -41,7 +41,15 @@
 	.btn.btn-primary:hover,
 	.button-primary:hover{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(121 193 119/var(--tw-bg-opacity));border-color:rgb(90 145 89/var(--tw-border-opacity))}
     .puzzle-sprint_main_box{margin-top:-20px;}
-		
+	.b-game-image{background:url(./halloween-media/cauldron.gif) no-repeat}
+	.b-field__body_right{background-color:rgba(75, 215, 75, 0.2);}
+	.b-field__body_wrong {background-color:rgba(197, 27, 21, 0.2);}
+	.finalGifs{margin-top:50px;}
+	
+
+	
+
+	
 	@media (max-width: 1200px) {
 	.b-game__field {height: 410px;}
     .b-field__words {margin-top: -30px;} 
@@ -221,7 +229,7 @@
 	<div class="undercap undercap_bg-color_blue">
 		<div class="b-header_content__items">
 			<div class="b-header_content__item m-header_content__title">
-			<img id="title-picture" class="img-title" src="./animals-media/animals-title.png" alt="" background="transparent">
+			<img id="title-picture" class="img-title" src="./halloween-media/halloween-title.png" alt="" background="transparent">
 			</div>
 		</div>
 	</div>
@@ -231,8 +239,8 @@
 		  <button class="btn btn-lg button-primary show_vocabulary_js" style="min-width:236px;">Show Vocabulary</button>
 		  <button class="btn btn-lg button-primary show_qr_js" style="min-width:236px;">Show QR code</button> 
 		</div>
-		<p class="vocabulary_js" align="center" ><iframe id="vocabulary" data-src="./animals-media/animals-vocabulary.html" class="no-scroll" loading="lazy" style="width:820px;height:500px;border: 3px dotted #14a3b5;"></iframe></p>
-		<p class="qr_pop_up_js" align="center" > <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
+		<p class="vocabulary_js" align="center" ><iframe id="vocabulary" data-src="./halloween-media/halloween-vocabulary.html" class="no-scroll" loading="lazy" style="width:820px;height:500px;border: 3px dotted #14a3b5;"></iframe></p>
+		<p class="qr_pop_up_js" align="center" > <img src="./halloween-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
 	</div>
 	
 	<div class="container-fluid" style="">
@@ -288,7 +296,7 @@
   </div>
    	</div>
 
-	<div class="container-fluid puzzle-sprint_main_box"oncontextmenu="return false">
+	<div class="container-fluid puzzle-sprint_main_box" oncontextmenu="return false">
 	  <div class="row" style="justify-content: center;gap:5px;">
 
 	    <div id="sprint-game">
@@ -305,7 +313,7 @@
                 <div id="b-game" class="b-game__field b-field b-game-image">
                     <div id="word-game" class="b-field__body">
                         <div class="b-field__words puzzle-sprint__word playerSpan">
-                            <span id="blue-team"><img id="currentImage" src="./media/Blue-team.png" alt="" class="img-regular" background="transparent"></span>			
+                            <span id="blue-team"><img id="currentImage" src="./halloween-media/Blue-team.png" alt="" class="img-regular" background="transparent"></span>			
                         </div>
 						
 						
@@ -421,7 +429,7 @@
                 <div id="b-game2" class="b-game__field b-field b-game-image">
                     <div id="word-game2" class="b-field__body">
                         <div class="b-field__words puzzle-sprint2__word playerSpan">
-                            <span id="red-team"><img src="./media/Red-team.png" alt="" class="img-regular" background="transparent"></span>
+                            <span id="red-team"><img src="./halloween-media/Red-team.png" alt="" class="img-regular" background="transparent"></span>
                         </div>
 						
 						<div id="finish_picture_2">
@@ -541,7 +549,7 @@
 	<script type="text/javascript" src="./files/helpers.js"></script> 
 	<script type="text/javascript" src="./files/jquery.path.js"></script>
 	<script type="text/javascript" src="./files/redesign-header.js"></script>   
-	<script type="text/javascript" src="./libraries/library-animals.js"></script>
+	<script type="text/javascript" src="./libraries/library-halloween.js"></script>
 
 				<script>
                     $('.show_translations_js').on('click', function(event) {

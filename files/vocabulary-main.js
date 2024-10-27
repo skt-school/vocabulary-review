@@ -1456,10 +1456,10 @@ $(function() {
 	  var targetDiv2 = document.getElementById('finish_picture_2');
 	  var imageElement = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Blue-team.png', height: 150});
 	  var imageElement_2 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Red-team.png', height: 150});
-      var imageElement1 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/victory.gif', width: 350, height: 150});
-	  var imageElement2 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/defeat.gif', width: 350, height: 150});
-	  var imageElement3 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/draw.gif', width: 350, height: 150});
-	  var imageElement4 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/draw.gif', width: 350, height: 150});  
+      var imageElement1 = Object.assign(document.createElement('img'), {src: 'media/victory.gif', className: "finalGifs"});
+	  var imageElement2 = Object.assign(document.createElement('img'), {src: 'media/defeat.gif', className: "finalGifs"});
+	  var imageElement3 = Object.assign(document.createElement('img'), {src: 'media/draw.gif', className: "finalGifs"});
+	  var imageElement4 = Object.assign(document.createElement('img'), {src: 'media/draw.gif', className: "finalGifs"});  
 	  var clockElement = document.getElementById('b-sprint__clock');
 	  var clockElement2 = document.getElementById('b-timer');
 	  var totalResult = number1 + number2;
@@ -1473,6 +1473,7 @@ $(function() {
 	  
 	  wordGame.classList.remove('b-field__body_right', 'b-field__body_wrong');
 	  wordGame2.classList.remove('b-field__body_right', 'b-field__body_wrong');	
+
 	  audio.playSound(window['STATIC_HOME'] + '/finish.mp3');
 
 	  clockElement2.parentNode.replaceChild(totalScore, clockElement2);

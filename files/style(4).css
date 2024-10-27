@@ -184,12 +184,13 @@
     display: inline-block;
     width: 17px;
     height: 17px;
-    background: url("/templates/svg/icons/sprint/wrong.svg") no-repeat center;
+    background: url("") no-repeat center;
 }
 
 .b-field__body_right .b-field__icon {
     background-color: #70b16e;
     border-color: transparent;
+	
 }
 
 .b-field__body_right .b-field__icon:after {
@@ -197,7 +198,8 @@
     display: inline-block;
     width: 21px;
     height: 17px;
-    background: url("/templates/svg/icons/sprint/right.svg") no-repeat center;
+    background: url("") no-repeat center;
+	
 }
 
 
