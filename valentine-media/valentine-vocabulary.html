@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Valentine Vocabulary</title>
+
+<style>
+    body{margin:0px;}
+    div{width:800px;display:block;margin:auto;height:auto;right:-2;text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:80px;font-weight:bold;
+        padding-bottom:10px;}
+    img{width:500px;max-height:500px;}
+    body > div{height:500px;padding-top:20px;}
+    a {position:absolute;margin-top:150px;font-size:30px;background:#14a3b5;color:white;padding:20px;}
+
+</style>
+
+</head>
+<body>
+
+<div><div>Heart</div><img src="./heart.png"><a>Next</a></div>
+<div><div>Balloons</div><img src="./balloons.png"><a>Next</a></div>
+<div><div>Gift</div><img src="./gift.png"><a>Next</a></div>
+<div><div>Bow</div><img src="./bow.png"><a>Next</a></div>
+<div><div>Chocolate</div><img src="./chocolate.png"><a>Next</a></div>
+<div><div>Perfume</div><img src="./perfume.png"><a>Next</a></div>
+<div><div>Teddy bear</div><img src="./teddy_bear.png"><a>Next</a></div>
+<div><div>Valentine card</div><img src="./valentine_card.png"><a>Next</a></div>
+<div><div>Puppy</div><img src="./puppy.png"><a>Next</a></div>
+<div><div>Cupid</div><img src="./cupid.png"><a>Next</a></div>
+<div><div>Arrow</div><img src="./arrow.png"><a>Next</a></div>
+<div><div>Couple</div><img src="./couple.png"><a>Next</a></div>
+<div><div>Hug</div><img src="./hug.png"><a>Next</a></div>
+<div><div>Kiss</div><img src="./kiss.png"><a>Next</a></div>
+<div><div>Date</div><img src="./date.png"><a>Next</a></div>
+<div><div>Rose</div><img src="./rose.png"><a>Next</a></div>
+<div><div>Bouquet</div><img src="./bouquet.png"><a>Next</a></div>
+<div><div>Proposal</div><img src="./proposal.png"><a>Next</a></div>
+<div><div>Ring</div><img src="./ring.png"><a>Next</a></div>
+<div><div>Inclusion</div><img src="./inclusion.png"><a style="background:red">First</a></div>
+
+   
+<script>
+    const link = document.querySelectorAll("a");
+    const NumberOfLinks = document.querySelectorAll("a").length;
+    for (var i = 0; i < NumberOfLinks; i++){
+        document.querySelectorAll("body > div")[i].id = i;
+        if (i < NumberOfLinks - 1){
+            document.querySelectorAll("a")[i].href = '#' + (i + 1);
+        } else {
+            document.querySelectorAll("a")[i].href = '#0'; 
+        }
+    }
+</script>
+
+    </div>
+</body>
+</html>
